@@ -1,0 +1,93 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  background: #050309;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dragon-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 45% 40%,
+      rgba(55, 16, 2, 0.13),
+      transparent 65%
+    ),
+    #050309;
+}
+
+.dragon-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: crosshair;
+  touch-action: none;
+  user-select: none;
+}
+
+.dragon-canvas.is-dragging {
+  cursor: grabbing;
+}
+
+.instructions {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 95%;
+  text-align: center;
+  pointer-events: none;
+  user-select: none;
+}
+
+.instructions h2 {
+  margin-bottom: 18px;
+  color: #ff9800;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 6px rgba(255, 110, 0, 0.8),
+    0 0 17px rgba(255, 65, 0, 0.45);
+}
+
+.instructions p {
+  color: #89838f;
+  font-size: 10px;
+  letter-spacing: 0.8px;
+}
+
+@media (max-width: 600px) {
+  .instructions {
+    bottom: 7%;
+  }
+
+  .instructions h2 {
+    font-size: 12px;
+  }
+
+  .instructions p {
+    font-size: 9px;
+  }
+}
